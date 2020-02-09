@@ -1,0 +1,18 @@
+yarn add webpack webpack-cli webpack-dev-server -D
+yarn add typescript
+yarn add @babel/core @babel/preset-typescript -D
+yarn add babel-loader @babel/plugin-external-helpers @babel/plugin-proposal-class-properties @babel/plugin-proposal-object-rest-spread @babel/preset-env @babel/preset-react @babel/preset-typescript -D
+yarn add @types/react @types/react-dom html-webpack-plugin -D
+yarn add css-loader style-loader -D
+yarn add npm install svg-inline-loader react-inlinesvg -D
+
+yarn add @babel/plugin-transform-runtime --dev
+yarn add @babel/runtime
+
+"plugins": [
+    ["@babel/plugin-transform-runtime",
+      {
+        "regenerator": true
+      }
+    ]
+  ],
