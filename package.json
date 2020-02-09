@@ -2,6 +2,7 @@
   "name": "fav-rick-and-morty-episode-picker",
   "version": "0.1.0",
   "author": "Richiely Paiva",
+  "homepage": "https://richielybmp.github.io/fav-rick-and-morty-episode-picker/",
   "private": true,
   "main": "index.tsx",
   "dependencies": {
@@ -21,7 +22,9 @@
     "bundle": "webpack",
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
-    "check-types": "tsc"
+    "check-types": "tsc",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -49,6 +52,7 @@
     "@babel/preset-typescript": "^7.8.3",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",
+    "gh-pages": "^2.2.0",
     "html-webpack-plugin": "^3.2.0",
     "react-inlinesvg": "^1.2.0",
     "style-loader": "^1.1.3",

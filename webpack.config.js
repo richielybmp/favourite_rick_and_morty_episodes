@@ -2,6 +2,7 @@ const path = require('path')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+
 const rules = [
     {
         test: /\.(ts|js)x?$/,
@@ -27,7 +28,7 @@ module.exports = {
     // and output it into /dist as bundle.js
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
     },
     resolve: { extensions: ['.ts', '.tsx', '.js'] },
     module: { rules },
@@ -39,6 +40,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: './public/index.html'
-        })
-    ]
+        }),
+    ],
+
 }

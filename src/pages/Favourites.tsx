@@ -10,7 +10,8 @@ function Favourites(): JSX.Element {
 
     useEffect(() => {
         const local_fav = localStorage.getItem('local_fav_ep')
-        dispatch({ payload: (JSON.parse(local_fav)), type: 'ADD_FAV' });
+        if (local_fav)
+            dispatch({ payload: (JSON.parse(local_fav)), type: 'ADD_FAV' });
     }, [])
 
     const props: IEpisodesProps = {
