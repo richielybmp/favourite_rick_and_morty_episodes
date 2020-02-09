@@ -33,7 +33,8 @@ module.exports = {
     module: { rules },
     devServer: {
         contentBase: './',
-        port: 5000
+        port: 5000,
+        historyApiFallback: true,
     },
     plugins: [
         new HtmlWebpackPlugin({

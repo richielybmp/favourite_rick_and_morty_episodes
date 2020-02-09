@@ -1,16 +1,17 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Store } from '../Store'
 import { toggleFavouriteEpisode } from '../Actions'
 import { IEpisodesProps } from '../interfaces'
 
 const EpisodeList = React.lazy(() => import('../components/EpisodesList'))
 
-
 function Favourites(): JSX.Element {
     const { state, dispatch } = useContext(Store)
 
-    const local_fav = localStorage.getItem('local_fav_ep')
-    console.log(JSON.parse(local_fav));
+    useEffect(() => {
+        const local_fav = localStorage.getItem('local_fav_ep')
+        dispatch({ payload: (JSON.parse(local_fav)), type: 'ADD_FAV' });
+    }, [])
 
     const props: IEpisodesProps = {
         episodes: state.favourites,

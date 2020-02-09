@@ -8,7 +8,6 @@ const EpisodeList = React.lazy(() => import('../components/EpisodesList'))
 function Home() {
 
     const { state, dispatch } = useContext(Store)
-
     useEffect(() => {
         state.episodes.length === 0 && fetchDataAction(dispatch)
     })
