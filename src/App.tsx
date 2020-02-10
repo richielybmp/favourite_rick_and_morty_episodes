@@ -18,7 +18,7 @@ function App(props: any) {
   }, [])
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Fragment>
         <header className="header">
           <div>
