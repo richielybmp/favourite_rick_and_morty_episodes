@@ -2,7 +2,7 @@
   "name": "fav-rick-and-morty-episode-picker",
   "version": "0.1.0",
   "author": "Richiely Paiva",
-  "homepage": "https://richielybmp.github.io/fav-rick-and-morty-episode-picker/",
+  "homepage": "https://richielybmp.github.io/favourite_rick_and_morty_episodes/",
   "private": true,
   "main": "index.tsx",
   "dependencies": {
